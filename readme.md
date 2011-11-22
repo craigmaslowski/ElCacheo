@@ -28,8 +28,8 @@ cache.get('#myDiv'); // instead of $('#myDiv')
 The get() method returns the jQuery/Zepto object, so you can chain as normal.
 
 ```JavaScript
-cache.get('body'); // instead of $('body').css({'background: '#cbcbcb'});
-cache.get('#myDiv'); // instead of $('#myDiv').text('Chaining works!');
+cache.get('body').css({'background: '#cbcbcb'}); 
+cache.get('#myDiv').text('Chaining works!');
 ```
 
 Full example
@@ -37,6 +37,6 @@ Full example
 ```JavaScript
 var Cache = ElCache.Cache.extend({});
 var cache = new Cache();
-cache.get('body');
-cache.get('#myDiv');
+cache.get('body').css({'background: '#cbcbcb'}); 
+cache.get('#myDiv').text('Chaining works!');
 ```
