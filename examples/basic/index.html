@@ -13,9 +13,9 @@
 	<script>
 		(function() {
 			var Cache = ElCacheo.Cache.extend({});
-			window.cache = new Cache();
-			console.log(cache.get('#one'));
-			console.log(cache.get('#two'));					
+			var cache = new Cache();
+			cache.get('#one').css({'background': '#fb0000'});
+			cache.get('#two').text('El Cacheo lives!');
 		})();
 	</script>	
 </body>	
