@@ -48,6 +48,7 @@ cache.get('#myDiv').text('Chaining works!');
 Get the results of a selector. cache.get('body') works the same as $('body') except it will return the cached value if it exists.
 
 |Param|Definition|
+|-----|----------|
 |selector|The css selector to lookup. (ie.'#myDiv', 'li', etc.) |
 |nocache|Passing true forces ElCacheo to lookup the selector and (re)store the value in the cache|
 
@@ -56,6 +57,7 @@ Get the results of a selector. cache.get('body') works the same as $('body') exc
 Returns true if the cache holds a value for the selector.
 
 |Param|Definition|
+|-----|----------|
 |selector|The css selector to check. (ie.'#myDiv', 'li', etc.) |
 
 ### set(selectors)
@@ -63,6 +65,7 @@ Returns true if the cache holds a value for the selector.
 Forces recaching of multiple selectors
 
 |Param|Definition|
+|-----|----------|
 |selectors|Array of selectors to set in bulk|
 
 ### reset()
