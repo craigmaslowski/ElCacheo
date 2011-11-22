@@ -13,7 +13,7 @@
 	<script>
 		(function() {
 			var Cache = ElCache.Cache.extend({});
-			var cache = new Cache();
+			window.cache = new Cache();
 			console.log(cache.get('#one'));
 			console.log(cache.get('#two'));					
 		})();

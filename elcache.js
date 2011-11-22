@@ -28,7 +28,8 @@
 		initialize: function(){},
 		
 		get: function(selector, nocache) {
-			if (!this.cache[selector] || nocache) this.cache[selector] = $(selector);
+			if (!this.cache[selector] || nocache) 
+				this.cache[selector] = $(selector);
 			return this.cache[selector];
 		},
 
