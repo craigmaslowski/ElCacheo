@@ -4,7 +4,7 @@ ElCacheo is a small JavaScript library designed to provide easy caching of jQuer
 
 ##Usage
 
-ElCacheo borrows heavily from Backbone. Usage is similar
+ElCacheo borrows heavily from Backbone. Usage is similar.
 
 First define your cache "class". 
 
@@ -18,10 +18,18 @@ Create an "instance" of your cache
 var cache = new Cache();
 ```
 
-Then proceed to grab selections as you would with jQuery
+Then pass your selector to the get() method. ElCacheo will make the selection, using jQuery or Zepto, or return the cached copy if the selection was previously made.
 
 ```JavaScript
-cache.get('body');
+cache.get('body'); // instead of $('body')
+cache.get('#myDiv'); // instead of $('#myDiv')
+```
+
+The get() method returns the jQuery/Zepto object, so you can chain as normal.
+
+```JavaScript
+cache.get('body'); // instead of $('body').css({'background: '#cbcbcb'});
+cache.get('#myDiv'); // instead of $('#myDiv').text('Chaining works!');
 ```
 
 Full example
@@ -30,4 +38,5 @@ Full example
 var Cache = ElCache.Cache.extend({});
 var cache = new Cache();
 cache.get('body');
+cache.get('#myDiv');
 ```
