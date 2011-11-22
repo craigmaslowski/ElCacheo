@@ -10,16 +10,19 @@ First define your cache "class".
 
 ```JavaScript
 var Cache = ElCache.Cache.extend({});
+```
 
 Create an "instance" of your cache
 
 ```JavaScript
 var cache = new Cache();
+```
 
 Then proceed to grab selections as you would with jQuery
 
 ```JavaScript
 cache.get('body');
+```
 
 Full example
 
@@ -27,3 +30,4 @@ Full example
 var Cache = ElCache.Cache.extend({});
 var cache = new Cache();
 cache.get('body');
+```
