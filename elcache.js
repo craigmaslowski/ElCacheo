@@ -11,6 +11,8 @@
  	
 	ElCache.VERSION = '0.0.1';
 	
+	var $ = root.jQuery || root.Zepto;
+	
 	ElCache.Cache = function(cache, options) {
 		var defaults;
 		if (defaults = this.defaults) {
@@ -25,26 +27,27 @@
 	_.extend(ElCache.Cache.prototype, {
 		initialize: function(){},
 		
-		get: function(el) {
-			return this.cache[el];
+		get: function(selector, nocache) {
+			if (!this.cache[selector] || nocache) this.cache[selector] = $(selector);
+			return this.cache[selector];
 		},
 
-		has: function(el) {
-			return this.cache[el] != null;
+		has: function(selector) {
+			return this.cache[selector] != null;
 		},
 	
-		set: function(els) {
-			if (!els) return this;
+		// explicitly set selector overriding the cache
+		set: function(selectors) {
+			if (!selector) return this;
 		
-			for (var el in els) {
-				var val = els[el];
-				this.cache[el] = val;
+			for (var selector in selectors) {
+				this.cache[selector] = $(selector);
 			}
 		},
 
-		unset: function(el) {
-			if (!(el in this.cache)) return this;
-			delete this.cache[el];
+		unset: function(selector) {
+			if (!(selector in this.cache)) return this;
+			delete this.cache[selector];
 			return this;
 		},
 	

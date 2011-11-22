@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ElCache Basic Example</title>
+</head>
+<body>
+	<div id="one">One</div>
+	<div id="two">Two</div>
+	
+	<script src="http://documentcloud.github.com/underscore/underscore.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script src="../../elcache.js"></script>
+	<script>
+		(function() {
+			var Cache = ElCache.Cache.extend({});
+			var cache = new Cache();
+			console.log(cache.get('#one'));
+			console.log(cache.get('#two'));					
+		})();
+	</script>	
+</body>	
+</html>
