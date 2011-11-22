@@ -9,10 +9,10 @@
 	
 	<script src="http://documentcloud.github.com/underscore/underscore.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-	<script src="../../elcache.js"></script>
+	<script src="../../elcacheo.js"></script>
 	<script>
 		(function() {
-			var Cache = ElCache.Cache.extend({});
+			var Cache = ElCacheo.Cache.extend({});
 			window.cache = new Cache();
 			console.log(cache.get('#one'));
 			console.log(cache.get('#two'));					
