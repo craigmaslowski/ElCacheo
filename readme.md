@@ -105,16 +105,18 @@ var cache = new Cache();
 
 cache.set(['body'], ['#myDiv']); // adds all selectors in the array into the cache
 cache.has('body'); // returns true
-cache.has('#myDiv''); // returns true
+cache.has('#myDiv'); // returns true
 
 cache.unset('body');
 cache.has('body'); // returns false
-cache.has('#myDiv''); // returns true
+cache.has('#myDiv'); // returns true
 ```
 
 ### reset()
 
 Resets cache to defaults, if defined, or an empty object.
+
+No defaults:
 
 ```JavaScript
 var Cache = ElCache.Cache.extend({});
@@ -126,6 +128,8 @@ cache.has('body'); // returns true
 cache.reset();
 cache.has('body'); // returns false
 ```
+
+With defaults:
 
 ```JavaScript
 var Cache = ElCache.Cache.extend({
