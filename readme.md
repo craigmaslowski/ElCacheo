@@ -148,3 +148,7 @@ cache.reset();
 cache.has('body'); // returns true
 cache.has('#myDiv'); // returns false
 ```
+
+## What's up with the 'O' in the name ElCacheo?
+
+ElCacheo was originally called ElCache (without the O). As I was writing the lib, I couldn't help reading 'El' as a spanish 'the'. This lead to me pronouncing the lib El Cache-o in my head which made me think of El Guapo from Three Amigos fame. My amusement won over saving an extra character when typing out the name. Thus, ElCacheo was born. 
