@@ -24,7 +24,7 @@ Create an "instance" of your cache
 var cache = new Cache();
 ```
 
-Then pass your selector to the get() method. ElCacheo will make the selection, using jQuery or Zepto, or return the cached copy if the selection was previously made.
+Then pass your selector to the get() method. ElCacheo will make the selection and add it to the cache, or return the cached copy if the selection was made previously.
 
 ```JavaScript
 cache.get('body'); // instead of $('body')
