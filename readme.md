@@ -153,7 +153,7 @@ cache.has('#myDiv'); // returns false
 
 ElCacheo was originally called ElCache (without the O). As I was writing the lib, I couldn't help reading 'El' as a spanish 'the'. This led to me pronouncing the lib El Cache-o in my head which made me think of El Guapo from Three Amigos fame. My amusement won over saving an extra character when typing out the name. Thus, ElCacheo was born. 
 
-Unfortunately, ElCacheo does not come with a [plethora of pinatas}(http://www.youtube.com/watch?v=-mTUmczVdik).
+Unfortunately, ElCacheo does not come with a [plethora of pinatas](http://www.youtube.com/watch?v=-mTUmczVdik).
 
 ![El Guapo](http://www.johnnygoodtimes.com/el%20guapo%2002.jpg "El Guapo")
 
