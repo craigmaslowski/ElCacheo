@@ -19,8 +19,7 @@
 			if (_.isFunction(defaults)) defaults = defaults.call(this);
 			cache = _.extend({}, defaults, cache);
 		}
-		this.cache = {};
-		this.set(cache);
+		this.cache = cache || {};
 		this.initialize(cache, options);
 	};
 
@@ -39,10 +38,10 @@
 	
 		// explicitly set selector overriding the cache
 		set: function(selectors) {
-			if (!selector) return this;
+			if (!selectors) return this;
 		
-			for (var selector in selectors) {
-				this.cache[selector] = $(selector);
+			for (var index in selectors) {
+				this.cache[selectors[index]] = $(selectors[index]);
 			}
 		},
 
