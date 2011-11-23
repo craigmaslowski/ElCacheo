@@ -103,7 +103,7 @@ Removes a selection from the cache
 var Cache = ElCacheo.Cache.extend({});
 var cache = new Cache();
 
-cache.set(['body'], ['#myDiv']); // adds all selectors in the array into the cache
+cache.set(['body', '#myDiv']); // adds all selectors in the array into the cache
 cache.has('body'); // returns true
 cache.has('#myDiv'); // returns true
 
