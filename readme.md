@@ -15,7 +15,7 @@ Usage is very similar to creating objects with Backbone.
 First define your cache "class". 
 
 ```JavaScript
-var Cache = ElCache.Cache.extend({});
+var Cache = ElCacheo.Cache.extend({});
 ```
 
 Create an "instance" of your cache
@@ -41,7 +41,7 @@ cache.get('#myDiv').text('Chaining works!');
 Full example
 
 ```JavaScript
-var Cache = ElCache.Cache.extend({});
+var Cache = ElCacheo.Cache.extend({});
 var cache = new Cache();
 cache.get('body').css({'background': '#cbcbcb'}); 
 cache.get('#myDiv').text('Chaining works!');
@@ -54,7 +54,7 @@ cache.get('#myDiv').text('Chaining works!');
 Get the results of a selector. cache.get('body') works the same as $('body') except it will return the cached value if it exists. If the value is not in the cache, get will cache the selection and return the results.
 
 ```JavaScript
-var Cache = ElCache.Cache.extend({});
+var Cache = ElCacheo.Cache.extend({});
 var cache = new Cache();
 
 cache.get('body'); // returns the cached value or adds the selection to the cache if it's not cached yet
@@ -63,7 +63,7 @@ cache.get('body'); // returns the cached value or adds the selection to the cach
 Passing true to the nocache parameter will cause get to recache the selection and return the results
 
 ```JavaScript
-var Cache = ElCache.Cache.extend({});
+var Cache = ElCacheo.Cache.extend({});
 var cache = new Cache();
 
 cache.get('body', true); // recaches the selection and returns the results
@@ -74,7 +74,7 @@ cache.get('body', true); // recaches the selection and returns the results
 Returns true if the cache holds a value for the selector passed in.
 
 ```JavaScript
-var Cache = ElCache.Cache.extend({});
+var Cache = ElCacheo.Cache.extend({});
 var cache = new Cache();
 
 cache.get('body');
@@ -87,7 +87,7 @@ cache.has('#myDiv'); // returns false
 Adds multiple selections to the cache with a single function call
 
 ```JavaScript
-var Cache = ElCache.Cache.extend({});
+var Cache = ElCacheo.Cache.extend({});
 var cache = new Cache();
 
 cache.set(['body'], ['#myDiv']); // adds all selectors in the array into the cache
@@ -100,7 +100,7 @@ cache.has('#myDiv'); // returns true
 Removes a selection from the cache
 
 ```JavaScript
-var Cache = ElCache.Cache.extend({});
+var Cache = ElCacheo.Cache.extend({});
 var cache = new Cache();
 
 cache.set(['body'], ['#myDiv']); // adds all selectors in the array into the cache
@@ -119,7 +119,7 @@ Resets cache to defaults, if defined, or an empty object.
 No defaults:
 
 ```JavaScript
-var Cache = ElCache.Cache.extend({});
+var Cache = ElCacheo.Cache.extend({});
 var cache = new Cache();
 
 cache.get('body');
@@ -132,7 +132,7 @@ cache.has('body'); // returns false
 With defaults:
 
 ```JavaScript
-var Cache = ElCache.Cache.extend({
+var Cache = ElCacheo.Cache.extend({
 	defaults: {
 		'body': $('body');
 	}
