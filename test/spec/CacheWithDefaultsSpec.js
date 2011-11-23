@@ -16,6 +16,10 @@ describe('a cache with defaults', function () {
 	});
 	
 	it('should reset the cache to defaults when calling reset', function () {
-		cacheWithDefaults.get('#elcacheo')
+		expect(cacheWithDefaults.cache['#elcacheo']).toBeDefined();
+		cacheWithDefaults.unset('#elcacheo');
+		expect(cacheWithDefaults.cache['#elcacheo']).toBeUndefined();
+		cacheWithDefaults.reset();
+		expect(cacheWithDefaults.cache['#elcacheo']).toBeDefined();
 	});
 });
