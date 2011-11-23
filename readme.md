@@ -43,7 +43,7 @@ Full example
 ```JavaScript
 var Cache = ElCache.Cache.extend({});
 var cache = new Cache();
-cache.get('body').css({'background: '#cbcbcb'}); 
+cache.get('body').css({'background': '#cbcbcb'}); 
 cache.get('#myDiv').text('Chaining works!');
 ```
 
