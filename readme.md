@@ -90,7 +90,7 @@ Adds multiple selections to the cache with a single function call
 var Cache = ElCacheo.Cache.extend({});
 var cache = new Cache();
 
-cache.set(['body'], ['#myDiv']); // adds all selectors in the array into the cache
+cache.set(['body', '#myDiv']); // adds all selectors in the array into the cache
 cache.has('body'); // returns true
 cache.has('#myDiv'); // returns true
 ```
