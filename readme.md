@@ -92,7 +92,7 @@ var cache = new Cache();
 
 cache.set(['body'], ['#myDiv']); // adds all selectors in the array into the cache
 cache.has('body'); // returns true
-cache.has('#myDiv''); // returns true
+cache.has('#myDiv'); // returns true
 ```
 
 ### unset(selector)
