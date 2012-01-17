@@ -29,9 +29,11 @@
 		get: function(selector, nocache) {
 			if (!this.cache[selector] || nocache) 
 				if (this.scope)
-					this.cache[selector] = $(selector, this.scope);
+					if ($(selector, this.scope).length > 0)
+						this.cache[selector] = $(selector, this.scope);
 				else
-					this.cache[selector] = $(selector);
+					if ($(selector).length > 0)
+						this.cache[selector] = $(selector);
 			return this.cache[selector];
 		},
 
