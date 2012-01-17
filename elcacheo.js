@@ -28,12 +28,14 @@
 		
 		get: function(selector, nocache) {
 			if (!this.cache[selector] || nocache) 
-				if (this.scope)
+				if (this.scope) {
 					if ($(selector, this.scope).length > 0)
 						this.cache[selector] = $(selector, this.scope);
-				else
+				}
+				else {
 					if ($(selector).length > 0)
 						this.cache[selector] = $(selector);
+				}
 			return this.cache[selector];
 		},
 
